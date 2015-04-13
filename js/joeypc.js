@@ -1,4 +1,4 @@
-//	joeypc JS/jQuery framework http://joeypc.com version 0.0.1 //
+//	joeypc JS/jQuery framework http://joeypc.com version 0.0.2 //
 //  copyright April 2015 by Dan McKeown http://danmckeown.info Licensed under MIT license //
 
 ;function joeypc() {
@@ -25,11 +25,29 @@ function joeypc_random_background() {
     console.log("changing background to " + randomNumber);
 									}
 
-function joeypc_change_background(color) {
+function joeypc_change_background(color) {   		//	this one still needs testing
 	console.log('joeypc user-set background changer runnning');
 	var randomNumber = color;
   	$( "body" ).css( "background-color", randomNumber );
     console.log("changing background to " + randomNumber);
 											}
+
+function joeypc_random_light_background() {
+	var randomNumber = "#FF";
+
+	while (randomNumber.length != 7) {
+		console.log('joeypc random background runnning');
+		var randomNumber = "#FF";
+		for (i = 0; i < 3; i++) {
+			var digit = Math.floor((Math.random() * 9) + 5);
+
+			randomNumber = randomNumber + digit;
+								}
+	 	$( "body" ).css( "background-color", randomNumber );
+	    console.log("changing background to " + randomNumber);
+	    							}
+
+									}
+
 
 joeypc();
