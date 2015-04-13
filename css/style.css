@@ -1,5 +1,14 @@
-/*  Ryukyu HTML starter CSS by Dan McKeown http://danmckeown.info  */
+/*  Ryukyu CSS framework by Dan McKeown http://danmckeown.info copyright April 2015 Licensed under MIT license  */
 
 .il {
 	display: inline-block;
 }
+
+.italics {
+	font-style: italic;
+}
+
+.paddingleft10 {
+	padding-left: 10px;
+}
+

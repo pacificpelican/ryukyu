@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html><!-- Ryukyu HTML starter 0.2.0beta by Dan McKeown http://danmckeown.info copyright April 2015 Licensed under MIT license -->
+<head>
+	<title>joeypc debug page version 0.0.1</title>
+	<meta charset="utf-8">
+	<link href="css/style.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/joeypc.js"></script>
+	<script>$( document ).ready(function() {
+		var cNumber = "#EEEEEE";
+	 	console.log("changing background to " + cNumber);
+		$( "body" ).css( "background-color", cNumber );			
+		$( "div#thebutton1" ).click(function() {
+			joeypc_random_background();
+	    	console.log("changing background with joeypc_random_background");
+												});
+		$( "div#thebutton2" ).click(function() {
+			joeypc_random();
+	    	console.log("running random number returning function");
+												});
+		$( "div#thebutton2b" ).click(function() {
+			var x = joeypc_random();
+	    	console.log("running random number returning function");
+	    	window.alert("random number: " + x);
+												});
+		$( "div#thebuttonb" ).click(function() {
+			window.alert('yesh');
+			var randomNumber = "#888888";
+ 			 $( "body" ).css( "background-color", randomNumber );
+   			 console.log("changing background to (3)" + randomNumber);
+												});
+											});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Site heading</h1>
+		</div>
+		<div class="main">
+			<div class="apientry"
+				<h2>joeypc_random_background()</h2>
+				<p><div id="thebutton1"><a href="#">click here (change background)</a></div></p>
+			</div>
+			<div class="apientry"
+				<h2>joeypc_random_number()</h2>
+				<p><div id="thebutton2"><a href="#">click here (random number to console)</a></div></p>
+			</div>
+			<div class="apientry"
+				<h2>joeypc_random_number()</h2>
+				<p><div id="thebutton2b"><a href="#">click here (popup random number)</a></div></p>
+			</div>
+			<div class="apientry"
+				<h2>joeypc_random_background()</h2>
+				<p><div id="thebutton3"><a href="#">nothing (right now)</a></div></p>
+			</div>
+			<p><div id="thebuttonb"><a href="#">the button b (launch alert)</a></div></p>
+		</div>
+		<div class="sidebar">
+			<p>sidebar content</p>
+		</div>
+		<div class="footer">
+			<p>footer info</p>
+		</div>
+	</div>
+</body>
+</html>
