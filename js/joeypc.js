@@ -32,7 +32,7 @@ function joeypc_change_background(color) {   		//	this one still needs testing
     console.log("changing background to " + randomNumber);
 											}
 
-function joeypc_random_light_background() {
+function joeypc_random_reddish_light_background() {
 	var randomNumber = "#FF";
 
 	while (randomNumber.length != 7) {
@@ -46,8 +46,23 @@ function joeypc_random_light_background() {
 	 	$( "body" ).css( "background-color", randomNumber );
 	    console.log("changing background to " + randomNumber);
 	    							}
-
 									}
+
+function joeypc_random_yellow_background() {
+	var randomNumber = "#FFFF";
+
+
+		console.log('joeypc random background runnning');
+		
+		for (i = 0; i < 2; i++) {
+			var digit = Math.floor((Math.random() * 9) + 1);
+
+			randomNumber = randomNumber + digit;
+								}
+	 	$( "body" ).css( "background-color", randomNumber );
+	    console.log("changing background to " + randomNumber);
+	    							}
+	    					
 
 
 joeypc();

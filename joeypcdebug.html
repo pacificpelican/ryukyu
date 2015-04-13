@@ -30,8 +30,12 @@
    			 console.log("changing background to (3)" + randomNumber);
 												});
 		$( "div#thebutton3" ).click(function() {
-			joeypc_random_light_background();
-	    	console.log("changing background with joeypc_random_light_background");
+			joeypc_random_yellow_background();
+	    	console.log("changing background with joeypc_random_yellow_background");
+												});
+		$( "div#thebutton4" ).click(function() {
+			joeypc_random_reddish_light_background();
+	    	console.log("changing background with joeypc_random_light_reddish_background");
 												});
 											});
 	</script>
@@ -39,7 +43,7 @@
 <body>
 	<div class="container">
 		<div class="header">
-			<h1>Site heading</h1>
+			<h1>joeyPC API reference</h1>
 		</div>
 		<div class="main">
 			<div class="apientry">
@@ -55,8 +59,12 @@
 				<p><div id="thebutton2b"><a href="#">click here (popup random number)</a></div></p>
 			</div>
 			<div class="apientry">
-				<h2>joeypc_random_light_background()</h2>
+				<h2>joeypc_random_yellow_background()</h2>
 				<p><div id="thebutton3"><a href="#">click here (change background to something lighter)</a></div></p>
+			</div>
+			<div class="apientry">
+				<h2>joeypc_random_reddish_light_background()</h2>
+				<p><div id="thebutton4"><a href="#">click here (change background to something lighter)</a></div></p>
 			</div>
 			<div class="apientry">
 				<h2>and...</h2>
