@@ -36,7 +36,7 @@ function joeypc_random_reddish_light_background() {
 	var randomNumber = "#FF";
 
 	while (randomNumber.length != 7) {
-		console.log('joeypc random background runnning');
+		console.log('joeypc random reddish background runnning');
 		var randomNumber = "#FF";
 		for (i = 0; i < 3; i++) {
 			var digit = Math.floor((Math.random() * 9) + 5);
@@ -50,9 +50,7 @@ function joeypc_random_reddish_light_background() {
 
 function joeypc_random_yellow_background() {
 	var randomNumber = "#FFFF";
-
-
-		console.log('joeypc random background runnning');
+		console.log('joeypc random yellow background runnning');
 		
 		for (i = 0; i < 2; i++) {
 			var digit = Math.floor((Math.random() * 9) + 1);
@@ -62,6 +60,46 @@ function joeypc_random_yellow_background() {
 	 	$( "body" ).css( "background-color", randomNumber );
 	    console.log("changing background to " + randomNumber);
 	    							}
+
+function joeypc_random_yellow_text() {
+	var randomNumber = "#FFFF";
+		console.log('joeypc random yellow text runnning');
+		
+		for (i = 0; i < 2; i++) {
+			var digit = Math.floor((Math.random() * 9) + 1);
+
+			randomNumber = randomNumber + digit;
+								}
+		$( "body" ).css( "color", randomNumber );
+	    console.log("changing text color to " + randomNumber);
+
+}
+
+
+
+function joeypc_random_text() {
+	var randomNumber = "#";
+	console.log('joeypc random text color runnning');
+	for (i = 0; i < 6; i++) {
+		var digit = Math.floor((Math.random() * 9) + 0);
+		randomNumber = randomNumber + digit;
+							}
+		$( "body" ).css( "color", randomNumber );
+	    console.log("changing text color to " + randomNumber);
+
+}
+
+function joeypc_random_link_color() {
+	var randomNumber = "#";
+	console.log('joeypc random link color runnning');
+	for (i = 0; i < 6; i++) {
+		var digit = Math.floor((Math.random() * 9) + 0);
+		randomNumber = randomNumber + digit;
+							}
+		$( "a" ).css( "color", randomNumber );
+	    console.log("changing text color to " + randomNumber);
+
+}
 	    					
 
 

@@ -35,7 +35,23 @@
 												});
 		$( "div#thebutton4" ).click(function() {
 			joeypc_random_reddish_light_background();
-	    	console.log("changing background with joeypc_random_light_reddish_background");
+	    	console.log("changing background with joeypc_random_reddish_light_background");
+												});
+		$( "div#thebutton5" ).click(function() {
+			joeypc_random_yellow_text();
+	    	console.log("changing text color with joeypc_random_yellow_text");
+												});
+		$( "div#thebutton4b" ).click(function() {
+			joeypc_random_text();
+	    	console.log("changing text color with joeypc_random_text");
+												});
+		$( "div#thebutton6" ).click(function() {
+			joeypc_random_link_color();
+	    	console.log("changing link color with joeypc_random_link_color");
+												});
+		$( "div#thebutton7" ).click(function() {
+			joeypc_random_reddish_text();
+	    	console.log("changing text color with joeypc_random_reddish_text");
 												});
 											});
 	</script>
@@ -43,7 +59,7 @@
 <body>
 	<div class="container">
 		<div class="header">
-			<h1>joeyPC API reference</h1>
+			<h1><a href="http://joeypc.com">joeyPC</a> API reference</h1>
 		</div>
 		<div class="main">
 			<div class="apientry">
@@ -64,7 +80,23 @@
 			</div>
 			<div class="apientry">
 				<h2>joeypc_random_reddish_light_background()</h2>
-				<p><div id="thebutton4"><a href="#">click here (change background to something lighter)</a></div></p>
+				<p><div id="thebutton4"><a href="#">click here (change background to something light-reddish)</a></div></p>
+			</div>
+			<div class="apientry">
+				<h2>joeypc_random_text()</h2>
+				<p><div id="thebutton4b"><a id="textcolor" href="#textcolor">click here (change text color to something)</a></div></p>
+			</div>
+			<div class="apientry">
+				<h2>joeypc_random_yellow_text()</h2>
+				<p><div id="thebutton5"><a href="#yellowtext" id="yellowtext">click here (change text to something yellow)</a></div></p>
+			</div>
+			<div class="apientry">
+				<h2>joeypc_random_link_color()</h2>
+				<p><div id="thebutton6"><a href="#randomlink" id="randomlink">click here (change links to something)</a></div></p>
+			</div>
+			<div class="apientry">
+				<h2>joeypc_random_reddish_text()</h2>
+				<p><div id="thebutton7"><a href="#randomlink" id="randomlink">click here (change links to reddish) -BROKEN-</a></div></p>
 			</div>
 			<div class="apientry">
 				<h2>and...</h2>
