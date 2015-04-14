@@ -75,7 +75,23 @@ function joeypc_random_yellow_text() {
 
 }
 
+function joeypc_random_reddish_text() {
+	var randomNumber = "#FF";
 
+	while (randomNumber.length != 7) {
+		console.log('joeypc random reddish background runnning');
+		var randomNumber = "#FF";
+		for (i = 0; i < 3; i++) {
+			var digit = Math.floor((Math.random() * 9) + 5);
+
+			randomNumber = randomNumber + digit;
+								}
+	 		$( "body" ).css( "color", randomNumber );
+	    console.log("changing text color to " + randomNumber);
+	    							}
+	
+
+}
 
 function joeypc_random_text() {
 	var randomNumber = "#";
