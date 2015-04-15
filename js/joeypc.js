@@ -116,7 +116,10 @@ function joeypc_random_link_color() {
 	    console.log("changing text color to " + randomNumber);
 
 }
-	    					
+	    		
+function joeypc_reload_page() {
+	    	document.location.reload(true);			
+	    						}
 
 
 joeypc();

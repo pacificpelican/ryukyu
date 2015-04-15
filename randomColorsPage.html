@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html><!-- Ryukyu HTML5 starter index.html template 0.2.0 by Dan McKeown http://danmckeown.info copyright April 2015 Licensed under MIT license -->
+<head>
+	<title>Random-colored page</title>
+	<meta charset="utf-8">
+	<link href="css/ryukyustyle.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/joeypc.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+
+			joeypc_random_background();
+				
+		$( "div#thebutton1" ).click(function() {
+			joeypc_random_background();
+	    	console.log("changing background with joeypc_random_background");
+												});
+		$( "div#thebutton2" ).click(function() {
+			joeypc_random();
+	    	console.log("running random number returning function");
+												});
+		
+		$( "div#thebuttonb" ).click(function() {
+			window.alert('yesh');
+			var randomNumber = "#888888";
+ 			 $( "body" ).css( "background-color", randomNumber );
+   			 console.log("changing background to (3)" + randomNumber);
+												});
+		$( "div#thebutton3" ).click(function() {
+			joeypc_random_yellow_background();
+	    	console.log("changing background with joeypc_random_yellow_background");
+												});
+		$( "div#thebutton4" ).click(function() {
+			joeypc_random_reddish_light_background();
+	    	console.log("changing background with joeypc_random_reddish_light_background");
+												});
+		$( "div#thebutton5" ).click(function() {
+			joeypc_random_yellow_text();
+	    	console.log("changing text color with joeypc_random_yellow_text");
+												});
+		$( "div#thebutton4b" ).click(function() {
+			joeypc_random_text();
+	    	console.log("changing text color with joeypc_random_text");
+												});
+		$( "div#thebutton6" ).click(function() {
+			joeypc_random_link_color();
+	    	console.log("changing link color with joeypc_random_link_color");
+												});
+		$( "div#thebutton7" ).click(function() {
+			joeypc_random_reddish_text();
+	    	console.log("changing text color with joeypc_random_reddish_text");
+												});
+		$( "div#thebutton8" ).click(function() {
+			console.log("0000");
+			joeypc_reload_page();
+												});
+											});
+											
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<h1>Random Color Demo Page</h1> from <a href="http://joeypc.com">joeypc.com</a>
+		</header>
+		<main class="main">
+			<h2>Content headline</h2>
+			<p>Main content</p>
+			<div class="apientry">
+				<h2>joeypc_random_reload_page()</h2>
+				<p><div id="thebutton8"><a href="#" id="reloadpagelink">(reload page)</a></div></p>
+			</div>
+			<p><div id="thebutton2b"><a href="#" id="reloadpagelink"></a></div></p>
+		</main>
+		<aside class="sidebar">
+			<p>sidebar content</p>
+		</aside>
+		<footer class="footer">
+			<p>footer info</p>
+		</footer>
+	</div>
+</body>
+</html>
