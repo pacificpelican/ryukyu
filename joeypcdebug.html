@@ -56,6 +56,15 @@
 		$( "div#thebutton8" ).click(function() {
 			joeypc_reload_page();
 												});
+		$( "div#thebutton9" ).click(function() {
+			joeypc_random_colors_yellow_red();
+												});
+		$( "div#thebutton10" ).click(function() {
+			joeypc_change_background("blue");
+												});
+		$( "div#thebutton11" ).click(function() {
+			joeypc_change_text_color("green");
+												});
 											});
 	</script>
 </head>
@@ -102,9 +111,23 @@
 				<p><div id="thebutton8"><a href="#reloadpagelink" id="reloadpagelink">click here (reload page)</a></div></p>
 			</div>
 			<div class="apientry">
+				<h2>joeypc_random_colors_yellow_red()</h2>
+				<p><div id="thebutton9"><a href="#redyellowlink" id="redyellowlink">click here (random page colors)</a></div></p>
+			</div>
+			<div class="apientry">
+				<h2>joeypc_change_background("blue")</h2>
+				<p><div id="thebutton10"><a href="#turnblue" id="turnblue">turn background blue</a></div></p>
+			</div>
+			<div class="apientry">
+				<h2>joeypc_change_text_color("green")</h2>
+				<p><div id="thebutton11"><a href="#turntextgreen" id="turntextgreen">turn text green</a></div></p>
+			</div>
+			<div class="apientry">
 				<h2>and...</h2>
 				<p><div id="thebutton300"><a href="#">nothing (right now)</a></div></p>
 			</div>
+
+
 
 			<div id="more">
 				<h3>more stuff</h3>

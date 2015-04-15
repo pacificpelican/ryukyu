@@ -1,4 +1,4 @@
-//	joeypc JS/jQuery framework http://joeypc.com version 0.0.2 //
+//	joeypc JS/jQuery framework http://joeypc.com version 0.0.3 //
 //  copyright April 2015 by Dan McKeown http://danmckeown.info Licensed under MIT license //
 
 ;function joeypc() {
@@ -25,49 +25,50 @@ function joeypc_random_background() {
     console.log("changing background to " + randomNumber);
 									}
 
-function joeypc_change_background(color) {   		//	this one still needs testing
+function joeypc_change_background(color) {   		
 	console.log('joeypc user-set background changer runnning');
 	var randomNumber = color;
   	$( "body" ).css( "background-color", randomNumber );
     console.log("changing background to " + randomNumber);
-											}
+										}
+
+function joeypc_change_text_color(color) {   		
+	console.log('joeypc user-set background changer runnning');
+	var randomNumber = color;
+  	$( "body" ).css( "color", randomNumber );
+    console.log("changing text color to " + randomNumber);
+										}
 
 function joeypc_random_reddish_light_background() {
 	var randomNumber = "#FF";
-
 	while (randomNumber.length != 7) {
 		console.log('joeypc random reddish background runnning');
 		var randomNumber = "#FF";
 		for (i = 0; i < 3; i++) {
 			var digit = Math.floor((Math.random() * 9) + 5);
-
 			randomNumber = randomNumber + digit;
 								}
 	 	$( "body" ).css( "background-color", randomNumber );
 	    console.log("changing background to " + randomNumber);
 	    							}
-									}
+													}
 
 function joeypc_random_yellow_background() {
 	var randomNumber = "#FFFF";
 		console.log('joeypc random yellow background runnning');
-		
 		for (i = 0; i < 2; i++) {
 			var digit = Math.floor((Math.random() * 9) + 1);
-
 			randomNumber = randomNumber + digit;
 								}
 	 	$( "body" ).css( "background-color", randomNumber );
 	    console.log("changing background to " + randomNumber);
-	    							}
+	    									}
 
 function joeypc_random_yellow_text() {
 	var randomNumber = "#FFFF";
 		console.log('joeypc random yellow text runnning');
-		
 		for (i = 0; i < 2; i++) {
 			var digit = Math.floor((Math.random() * 9) + 1);
-
 			randomNumber = randomNumber + digit;
 								}
 		$( "body" ).css( "color", randomNumber );
@@ -75,11 +76,11 @@ function joeypc_random_yellow_text() {
 
 }
 
-function joeypc_random_reddish_text() {
+function joeypc_random_reddish_text() 		{
 	var randomNumber = "#FF";
 
 	while (randomNumber.length != 7) {
-		console.log('joeypc random reddish background runnning');
+		console.log('joeypc random reddish text runnning');
 		var randomNumber = "#FF";
 		for (i = 0; i < 3; i++) {
 			var digit = Math.floor((Math.random() * 9) + 5);
@@ -89,9 +90,7 @@ function joeypc_random_reddish_text() {
 	 		$( "body" ).css( "color", randomNumber );
 	    console.log("changing text color to " + randomNumber);
 	    							}
-	
-
-}
+											}
 
 function joeypc_random_text() {
 	var randomNumber = "#";
@@ -114,12 +113,25 @@ function joeypc_random_link_color() {
 							}
 		$( "a" ).css( "color", randomNumber );
 	    console.log("changing text color to " + randomNumber);
-
-}
+									}
 	    		
 function joeypc_reload_page() {
 	    	document.location.reload(true);			
 	    						}
+
+function joeypc_random_colors_yellow_red() {
+	joeypc_random_yellow_text();
+	joeypc_random_reddish_light_background();
+	var randomNumber = "#FFFF";
+		console.log('joeypc random yellow link color (subroutine) runnning');
+		for (i = 0; i < 2; i++) {
+			var digit = Math.floor((Math.random() * 9) + 1);
+			randomNumber = randomNumber + digit;
+								}
+		$( "a" ).css( "color", randomNumber );
+	    console.log("changing link text color to " + randomNumber);
+											}
+
 
 
 joeypc();
