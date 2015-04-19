@@ -1,4 +1,4 @@
-//	joeypc JS/jQuery framework http://joeypc.com version 0.0.5 //
+//	joeypc JS/jQuery framework http://joeypc.com version 0.0.6 //
 //  copyright April 2015 by Dan McKeown http://danmckeown.info Licensed under MIT license //
 
 ;function joeypc() {
@@ -192,8 +192,6 @@ function joeypc_random_pink_background() {
 			randomNumber = randomNumber + digit;
 								}
 		randomNumber = randomNumber + "F";
-
-
 		$( "body" ).css( "background-color", randomNumber );
 	    console.log("changing text color to " + randomNumber);
 									}
@@ -204,6 +202,40 @@ function joeypc_random_dark_text_on_light_background_with_dark_links() {
 	joeypc_random_dark_links();
 																	}
 
-
+function joeypc_get_longest_word_in_sentence(string) {
+	var string1 = string;
+	var leng = string1.length
+	var wordbox = [];
+	var wordboxcount = 0;
+	for (i=0; i<leng; i++) {
+		if (string1[i] == " ") {
+			// mark this as space between the end of a word, beginning of another
+			wordboxcount++;
+		}
+		if (string1[i] != " ") {
+			// absorb this string into the current word
+			if (wordbox[wordboxcount]) {
+			wordbox[wordboxcount] = wordbox[wordboxcount] + string1[i];
+										}
+			else  {
+			wordbox[wordboxcount] = string1[i];
+										}
+		}
+	}
+	var leng2 = wordbox.length;
+	var currentMax = 0;
+	var longest;
+	var newlimit = 0;
+	for (i=0; i<leng2; i++) {
+			if (wordbox[i]) {
+		leng3 = wordbox[i].length;
+		if (leng3 > currentMax) {	
+			longest = wordbox[i];
+			currentMax = wordbox[i].length;
+							}
+								}
+							}
+	return longest;
+													}
 
 joeypc();

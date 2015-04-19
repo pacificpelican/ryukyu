@@ -1,0 +1,75 @@
+/*  Ryukyu CSS framework by Dan McKeown copyright April 2015 								*/
+/*  http://danmckeown.info/code/ryukyu/ 													*/
+/*  v0.0.4    								Licensed under MIT license 					    */
+
+body {
+	font-family: Lato, Helvetica, sans-serif, sans;
+}
+
+.il {
+	display: inline-block;
+}
+
+.italics {
+	font-style: italic;
+}
+
+.paddingleft10 {
+	padding-left: 10px;
+}
+
+.text-primary {
+	color: blue;
+}
+
+.text-success {
+	color: green;
+}
+
+.text-danger {
+	color: red;
+}
+
+.btn {
+	border-radius: 10px;
+	border: 1px solid #AAAAAA;
+	background-color: #EEEEEE;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 5px;
+	padding-left: 5px; 
+	width: auto;
+	display: inline-block;
+	margin-bottom: 1px;
+	margin-top: 2px;
+}
+
+.jumbotron {
+	border-radius: 3px;
+	border: 2px solid #BBBBBB;
+	background-color: #DDDDDD;
+	padding-top: 11px;
+	padding-bottom: 10px;
+	padding-right: 25px;
+	padding-left: 25px; 
+	width: auto;
+	display: inline-block;
+	margin-bottom: 2px;
+}
+
+.alert, .alert-warning {
+	background-color: #FFF388;
+	padding-top: 11px;
+	padding-bottom: 10px;
+	padding-right: 15px;
+	padding-left: 15px; 
+	display: inline-block;
+	width: auto;
+	border-radius: 2px;
+	border: 2px solid #FFF829;
+	margin-bottom: 2px;
+}
+
+
+
+
