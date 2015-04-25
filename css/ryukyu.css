@@ -1,6 +1,6 @@
 /*  Ryukyu CSS framework by Dan McKeown copyright April 2015 								*/
 /*  http://danmckeown.info/code/ryukyu/ 													*/
-/*  v0.0.4    								Licensed under MIT license 					    */
+/*  v0.0.5   								Licensed under MIT license 					    */
 
 body {
 	font-family: Lato, Helvetica, sans-serif, sans;
@@ -70,6 +70,35 @@ body {
 	margin-bottom: 2px;
 }
 
+/* implementing the Bootstrap 3 API grid system */
+
+.col-md-4 {
+	max-width: 267px;
+	min-width: 260px;
+	display: inline-block;
+	margin-right: 2px;
+	margin-left: 2px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
+.col-md-6 {
+	max-width: 400px;
+	min-width: 398px;
+	display: inline-block;
+	margin-right: 2px;
+	margin-left: 2px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
+/* end of grid system */
+
+a {
+	text-decoration: none;
+}
 
 
 
