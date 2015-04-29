@@ -1,6 +1,6 @@
 /*  Ryukyu CSS framework by Dan McKeown copyright April 2015 								*/
 /*  http://danmckeown.info/code/ryukyu/ 													*/
-/*  v0.0.5   								Licensed under MIT license 					    */
+/*  v0.0.7   								Licensed under MIT license 					    */
 
 body {
 	font-family: Lato, Helvetica, sans-serif, sans;
@@ -37,7 +37,7 @@ body {
 	padding-top: 7px;
 	padding-bottom: 7px;
 	padding-right: 5px;
-	padding-left: 5px; 
+	padding-left: 5px;
 	width: auto;
 	display: inline-block;
 	margin-bottom: 1px;
@@ -51,7 +51,7 @@ body {
 	padding-top: 11px;
 	padding-bottom: 10px;
 	padding-right: 25px;
-	padding-left: 25px; 
+	padding-left: 25px;
 	width: auto;
 	display: inline-block;
 	margin-bottom: 2px;
@@ -62,7 +62,7 @@ body {
 	padding-top: 11px;
 	padding-bottom: 10px;
 	padding-right: 15px;
-	padding-left: 15px; 
+	padding-left: 15px;
 	display: inline-block;
 	width: auto;
 	border-radius: 2px;
@@ -76,8 +76,8 @@ body {
 	max-width: 267px;
 	min-width: 260px;
 	display: inline-block;
-	margin-right: 2px;
-	margin-left: 2px;
+	margin-right: 5px;
+	margin-left: 10px;
 	margin-top: 3px;
 	margin-bottom: 2px;
 	vertical-align: top;
@@ -87,8 +87,8 @@ body {
 	max-width: 400px;
 	min-width: 398px;
 	display: inline-block;
-	margin-right: 2px;
-	margin-left: 2px;
+	margin-right: 5px;
+	margin-left: 11px;
 	margin-top: 3px;
 	margin-bottom: 2px;
 	vertical-align: top;
@@ -99,6 +99,3 @@ body {
 a {
 	text-decoration: none;
 }
-
-
-
