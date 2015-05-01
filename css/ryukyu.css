@@ -1,6 +1,6 @@
 /*  Ryukyu CSS framework by Dan McKeown copyright April 2015 								*/
 /*  http://danmckeown.info/code/ryukyu/ 													*/
-/*  v0.0.8   								Licensed under MIT license 					    */
+/*  v0.0.9  								Licensed under MIT license 					    */
 
 body {
 	font-family: Lato, Helvetica, sans-serif, sans;
@@ -64,7 +64,8 @@ body {
 	padding-right: 15px;
 	padding-left: 15px;
 	display: inline-block;
-	width: auto;
+	max-width: 100%;
+	height: auto;
 	border-radius: 2px;
 	border: 2px solid #FFF829;
 	margin-bottom: 2px;
@@ -72,9 +73,18 @@ body {
 
 /* implementing the Bootstrap 3 API grid system */
 
+.col-md-3 {
+	max-width: 205px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 10px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
 .col-md-4 {
-	max-width: 267px;
-	min-width: 260px;
+	max-width: 274px;
 	display: inline-block;
 	margin-right: 5px;
 	margin-left: 10px;
@@ -84,8 +94,7 @@ body {
 }
 
 .col-md-6 {
-	max-width: 400px;
-	min-width: 398px;
+	max-width: 410px;
 	display: inline-block;
 	margin-right: 5px;
 	margin-left: 11px;
@@ -95,6 +104,28 @@ body {
 }
 
 /* end of grid system */
+
+
+/* responsive section */
+
+@media screen and (max-width: 900px) {
+	body {
+        font-size: 18px;
+    }
+	li {
+		padding-bottom: 6px;
+	}
+	.col-md-4, .col-md-3, .col-md-6 {
+	max-width: 100%;
+	height: auto;
+	}
+}
+
+@media screen and (min-width: 901px) {
+	body {
+        font-size: 16px;
+    }
+}
 
 a {
 	text-decoration: none;
@@ -111,6 +142,7 @@ img {
 	height: auto;
 }
 
+/* ENDOF responsive section */
 
 table {
 	border-style: dotted;
