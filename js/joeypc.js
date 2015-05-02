@@ -1,6 +1,6 @@
-//	joeypc JS/jQuery framework http://joeypc.com version 0.1.1 //
+//	joeypc JS/jQuery framework http://joeypc.com version 0.1.2 //
 //	https://github.com/pacificpelican/joeypc //
-//  copyright April 2015 by Dan McKeown http://danmckeown.info //
+//  copyright May 2015 by Dan McKeown http://danmckeown.info //
 //	Licensed under MIT license //
 
 ;function joeypc() {
@@ -35,10 +35,17 @@ function joeypc_change_background(color) {
 										}
 
 function joeypc_change_text_color(color) {
-	console.log('joeypc user-set background changer runnning');
+	console.log('joeypc user-set text color changer runnning');
 	var randomNumber = color;
   	$( "body" ).css( "color", randomNumber );
     console.log("changing text color to " + randomNumber);
+										}
+
+function joeypc_change_link_color(color) {
+	console.log('joeypc user-set link color background changer runnning');
+	var randomNumber = color;
+  	$( "a" ).css( "color", randomNumber );
+    console.log("changing link color to " + randomNumber);
 										}
 
 function joeypc_random_reddish_light_background() {
