@@ -1,6 +1,6 @@
 /*  Ryukyu CSS framework by Dan McKeown copyright April 2015 								*/
 /*  http://danmckeown.info/code/ryukyu/ 													*/
-/*  v0.0.9  								Licensed under MIT license 					    */
+/*  v0.0.10  								Licensed under MIT license 					    */
 
 body {
 	font-family: Lato, Helvetica, sans-serif, sans;
@@ -73,6 +73,26 @@ body {
 
 /* implementing the Bootstrap 3 API grid system */
 
+.col-md-1 {
+	max-width: 68px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 10px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
+.col-md-2 {
+	max-width: 137px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 10px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
 .col-md-3 {
 	max-width: 205px;
 	display: inline-block;
@@ -95,6 +115,66 @@ body {
 
 .col-md-6 {
 	max-width: 410px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 11px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
+.col-md-7 {
+	max-width: 478px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 11px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
+.col-md-8 {
+	max-width: 547px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 11px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
+.col-md-9 {
+	max-width: 615px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 11px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
+.col-md-10 {
+	max-width: 683px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 11px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
+.col-md-11 {
+	max-width: 752px;
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 11px;
+	margin-top: 3px;
+	margin-bottom: 2px;
+	vertical-align: top;
+}
+
+.col-md-12 {
+	max-width: 820px;
 	display: inline-block;
 	margin-right: 5px;
 	margin-left: 11px;
