@@ -1,17 +1,16 @@
 //	ryukyu.js JavaScript library
-//	v 0.1.7
+//	v 0.1.8
 //	copyright July 2015 Dan McKeown
 //      http://danmckeown.info/code/ryukyu
 //	Released under MIT license:
 //      https://github.com/pacificpelican/ryukyu/blob/master/LICENSE
 
-"use strict";
+"use strict";  //  class declarations require ES6/ES2015 and strict mode
 
 var ryukyu_retArr = [];
 var ryukyu_bigCount = 0;
 var ryukyu_nodeRetObj = {};
 
-                        //  class declarations require ES6/ES2015
 var ryukyu_listItem = class linkedListItem {  // This class instantiates a single variable that contains an id, a value and a next reference
     constructor(place, next, value) {
         if (value === undefined) {
@@ -74,7 +73,6 @@ function ryukyu_listToArray(head_id, nodeBaseName, arrName) { // This takes info
         var value1 = window[name0].value;
         console.log("looking to add value " + value1 + " to " + ryukyu_retArr);
         ryukyu_retArr[ryukyu_bigCount] = value1;
-//        window[arrName][ryukyu_bigCount] = value1;
         ryukyu_bigCount++;
         var next = window[name0].next;
         console.log("next is " + next);
@@ -88,7 +86,6 @@ function ryukyu_listToArray(head_id, nodeBaseName, arrName) { // This takes info
     console.log("resulting array " + arrName + " is " + window[arrName]);
     return theRet;  //  I don't know if it should return the array or true or another copy of the array as an object
 }
-
 
 function ryukyu_arrayToList(arr, nodeBaseName) {    // arr should be a variable not in quotes (or a literal in quotes)
                                                     // while nodeBaseName should be a name in quotes
@@ -112,7 +109,6 @@ function ryukyu_arrayToList(arr, nodeBaseName) {    // arr should be a variable 
                 window[name0] = new ryukyu_listItem(node_num, null, arr[i]);
                 console.log("array item " + arr[i] + " at " + i + " converted into linked list item " + name0 + " with value " + arr[i]);
             }
-        //    ryukyu_nodeRetObj.push(window[name0]);
             ryukyu_nodeRetObj[node_num] = window[name0];
             node_num++;
         }
