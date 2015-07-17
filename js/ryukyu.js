@@ -1,5 +1,5 @@
 //	ryukyu.js JavaScript library
-//	v 0.1.2
+//	v 0.1.3
 //	copyright July 2015 Dan McKeown http://danmckeown.info/code/ryukyu
 //	Released under MIT license
 
@@ -8,7 +8,8 @@
 var ryukyu_retArr = [];
 var ryukyu_bigCount = 0;
 
-var ryukyu_listItem = class linkedListItem {
+    //  class declarations require ES6/ES2015
+var ryukyu_listItem = class linkedListItem {  // This class instantiates a single variable that contains an id, a value and a next reference
     constructor(place, next, value) {
         if (value === undefined) {
             this.value = null;
@@ -26,7 +27,7 @@ var ryukyu_listItem = class linkedListItem {
     }
 };
 
-var ryukyu_list = class listNode {
+var ryukyu_list = class listNode {  //  This class generates a series of variables, each w/a next pointer to the next one's id
     constructor(theLength, baseName, defaultValue) {
         if (baseName === undefined) {
             console.log("basename automatically assigned as node");
@@ -52,7 +53,7 @@ var ryukyu_list = class listNode {
     }
 }
 
-function ryukyu_listToArray(head_id, nodeBaseName) {
+function ryukyu_listToArray(head_id, nodeBaseName, arrName) { // This takes info about the head list variable, works along chain and returns an array
     if ((head_id === undefined) || (nodeBaseName === undefined)) {
         return false;
     }
@@ -66,7 +67,7 @@ function ryukyu_listToArray(head_id, nodeBaseName) {
         var next = window[name0].next;
         console.log("next is " + next);
         if ((next != null) || (next != undefined)) {
-            ryukyu_listToArray(next, nodeBaseName, arrName);
+            ryukyu_listToArray(next, nodeBaseName);
         }
     }
     var theRet = ryukyu_retArr;
@@ -74,7 +75,7 @@ function ryukyu_listToArray(head_id, nodeBaseName) {
     return theRet;
 }
 
-var $ryukyu = function ryukyu(feature, payload) {
+var $ryukyu = function ryukyu(feature, payload) {  // This function can be called e.g. as $ryukyu("bubbleSort",[3,6,2,1]);
 	function sortResultArr(set) {
 		console.log("about to sort: " + set + "  using Ryukyu default sort");
 		var x = 0;
