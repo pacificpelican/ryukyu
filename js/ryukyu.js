@@ -1,7 +1,79 @@
 //	ryukyu.js JavaScript library
-//	v 0.0.5
+//	v 0.1.0
 //	copyright July 2015 Dan McKeown http://danmckeown.info/code/ryukyu
 //	Released under MIT license
+
+"use strict";
+
+var retArr = [];
+var bigCount = 0;
+
+var listItem = class linkedListItem {
+    constructor(place, next, value) {
+        if (value === undefined) {
+            this.value = null;
+        }
+        else {
+            this.value = value;
+        }
+        this.id = place;  // Let place be undefined rather than null by default since it is the id and should have a value
+        if (((next === undefined) || (next === "auto")) && (place != undefined)) {
+            this.next = place+1;
+        }
+        else {
+            this.next = next;
+        }
+    }
+};
+
+var list = class listNode {
+    constructor(theLength, baseName, defaultValue) {
+        if (baseName === undefined) {
+            console.log("basename automatically assigned as node");
+            baseName = "node";
+        }
+        if (defaultValue === undefined) {
+            console.log("setting default value to null");
+            var defaultValue = null;
+        }
+        for (var i=1; i<theLength; i++) {
+            var nodeName;
+            nodeName = baseName + "_" + i;
+            console.log("about to construct " + nodeName);
+            var name0 = nodeName;
+            window[name0] = new listItem(i, "auto", defaultValue);
+        }
+            var nodeName;
+            var pos = i;
+            nodeName = baseName + "_" + pos;
+            console.log("about to construct " + nodeName);
+            var name0 = nodeName;
+            window[name0] = new listItem(pos, null, defaultValue);
+    }
+}
+
+function listToArray(head_id, nodeBaseName, arrName) {
+    if ((head_id === undefined) || (nodeBaseName === undefined)) {
+        return false;
+    }
+    else {
+        if ((arrName === undefined) || (arrName === null)) {
+            arrName = "array";
+        }
+        var headNodeName = nodeBaseName + "_" + head_id;
+        var name0 = headNodeName;
+        var value1 = window[name0].value;
+        console.log("looking to add value " + value1 + " to " + retArr);
+        retArr[bigCount] = value1;
+        bigCount++;
+        var next = window[name0].next;
+        console.log("next is " + next);
+        if ((next != null) || (next != undefined)) {
+            listToArray(next, nodeBaseName, arrName);
+        }
+    }
+    return retArr;;
+}
 
 var $ryukyu = function ryukyu(feature, payload) {
 	function sortResultArr(set) {
