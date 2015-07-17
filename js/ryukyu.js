@@ -1,14 +1,14 @@
 //	ryukyu.js JavaScript library
-//	v 0.1.1
+//	v 0.1.2
 //	copyright July 2015 Dan McKeown http://danmckeown.info/code/ryukyu
 //	Released under MIT license
 
 "use strict";
 
-var retArr = [];
-var bigCount = 0;
+var ryukyu_retArr = [];
+var ryukyu_bigCount = 0;
 
-var listItem = class linkedListItem {
+var ryukyu_listItem = class linkedListItem {
     constructor(place, next, value) {
         if (value === undefined) {
             this.value = null;
@@ -26,7 +26,7 @@ var listItem = class linkedListItem {
     }
 };
 
-var list = class listNode {
+var ryukyu_list = class listNode {
     constructor(theLength, baseName, defaultValue) {
         if (baseName === undefined) {
             console.log("basename automatically assigned as node");
@@ -41,39 +41,36 @@ var list = class listNode {
             nodeName = baseName + "_" + i;
             console.log("about to construct " + nodeName);
             var name0 = nodeName;
-            window[name0] = new listItem(i, "auto", defaultValue);
+            window[name0] = new ryukyu_listItem(i, "auto", defaultValue);
         }
             var nodeName;
             var pos = i;
             nodeName = baseName + "_" + pos;
             console.log("about to construct " + nodeName);
             var name0 = nodeName;
-            window[name0] = new listItem(pos, null, defaultValue);
+            window[name0] = new ryukyu_listItem(pos, null, defaultValue);
     }
 }
 
-function listToArray(head_id, nodeBaseName, arrName) {
+function ryukyu_listToArray(head_id, nodeBaseName) {
     if ((head_id === undefined) || (nodeBaseName === undefined)) {
         return false;
     }
     else {
-        if ((arrName === undefined) || (arrName === null)) {
-            arrName = "array";
-        }
         var headNodeName = nodeBaseName + "_" + head_id;
         var name0 = headNodeName;
         var value1 = window[name0].value;
-        console.log("looking to add value " + value1 + " to " + retArr);
-        retArr[bigCount] = value1;
-        bigCount++;
+        console.log("looking to add value " + value1 + " to " + ryukyu_retArr);
+        ryukyu_retArr[ryukyu_bigCount] = value1;
+        ryukyu_bigCount++;
         var next = window[name0].next;
         console.log("next is " + next);
         if ((next != null) || (next != undefined)) {
-            listToArray(next, nodeBaseName, arrName);
+            ryukyu_listToArray(next, nodeBaseName, arrName);
         }
     }
-    var theRet = retArr;
-    bigCount = 0;
+    var theRet = ryukyu_retArr;
+    ryukyu_bigCount = 0;
     return theRet;
 }
 
