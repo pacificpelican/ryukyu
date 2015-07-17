@@ -1,5 +1,5 @@
 //	ryukyu.js JavaScript library
-//	v 0.1.6
+//	v 0.1.7
 //	copyright July 2015 Dan McKeown
 //      http://danmckeown.info/code/ryukyu
 //	Released under MIT license:
@@ -109,7 +109,7 @@ function ryukyu_arrayToList(arr, nodeBaseName) {    // arr should be a variable 
                 console.log("array item " + arr[i] + " at " + i + " converted into linked list item " + name0 + " with value " + arr[i]);
             }
             else{
-                window[name0] = new ryukyu_listItem(node_num, "null", arr[i]);
+                window[name0] = new ryukyu_listItem(node_num, null, arr[i]);
                 console.log("array item " + arr[i] + " at " + i + " converted into linked list item " + name0 + " with value " + arr[i]);
             }
         //    ryukyu_nodeRetObj.push(window[name0]);
