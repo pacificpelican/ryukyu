@@ -1,14 +1,17 @@
 //	ryukyu.js JavaScript library
-//	v 0.1.3
-//	copyright July 2015 Dan McKeown http://danmckeown.info/code/ryukyu
-//	Released under MIT license
+//	v 0.1.5
+//	copyright July 2015 Dan McKeown
+//      http://danmckeown.info/code/ryukyu
+//	Released under MIT license:
+//      https://github.com/pacificpelican/ryukyu/blob/master/LICENSE
 
 "use strict";
 
 var ryukyu_retArr = [];
 var ryukyu_bigCount = 0;
+var ryukyu_nodeRetObj = {};
 
-    //  class declarations require ES6/ES2015
+                        //  class declarations require ES6/ES2015
 var ryukyu_listItem = class linkedListItem {  // This class instantiates a single variable that contains an id, a value and a next reference
     constructor(place, next, value) {
         if (value === undefined) {
@@ -37,12 +40,14 @@ var ryukyu_list = class listNode {  //  This class generates a series of variabl
             console.log("setting default value to null");
             var defaultValue = null;
         }
+        ryukyu_nodeRetObj = {}
         for (var i=1; i<theLength; i++) {
             var nodeName;
             nodeName = baseName + "_" + i;
             console.log("about to construct " + nodeName);
             var name0 = nodeName;
             window[name0] = new ryukyu_listItem(i, "auto", defaultValue);
+            ryukyu_nodeRetObj[i] = window[name0];
         }
             var nodeName;
             var pos = i;
@@ -50,6 +55,8 @@ var ryukyu_list = class listNode {  //  This class generates a series of variabl
             console.log("about to construct " + nodeName);
             var name0 = nodeName;
             window[name0] = new ryukyu_listItem(pos, null, defaultValue);
+            ryukyu_nodeRetObj[i] = window[name0];
+            return ryukyu_nodeRetObj;
     }
 }
 
@@ -58,11 +65,16 @@ function ryukyu_listToArray(head_id, nodeBaseName, arrName) { // This takes info
         return false;
     }
     else {
+        if ((arrName === undefined) || (arrName === "null")) {
+            arrName = "array";
+        }
+        window[arrName] = [];
         var headNodeName = nodeBaseName + "_" + head_id;
         var name0 = headNodeName;
         var value1 = window[name0].value;
         console.log("looking to add value " + value1 + " to " + ryukyu_retArr);
         ryukyu_retArr[ryukyu_bigCount] = value1;
+//        window[arrName][ryukyu_bigCount] = value1;
         ryukyu_bigCount++;
         var next = window[name0].next;
         console.log("next is " + next);
@@ -72,7 +84,41 @@ function ryukyu_listToArray(head_id, nodeBaseName, arrName) { // This takes info
     }
     var theRet = ryukyu_retArr;
     ryukyu_bigCount = 0;
-    return theRet;
+    window[arrName] = theRet;
+    console.log("resulting array " + arrName + " is " + window[arrName]);
+    return theRet;  //  I don't know if it should return the array or true or another copy of the array as an object
+}
+
+
+function ryukyu_arrayToList(arr, nodeBaseName) {    // arr should be a variable not in quotes (or a literal in quotes)
+                                                    // while nodeBaseName should be a name in quotes
+    if ((arr === undefined) || (arr === "null")) {
+        return false;
+    }
+    else {
+        if ((nodeBaseName === undefined) || (nodeBaseName === "null") || (arr.length < 1)) {
+            nodeBaseName = "node";
+        }
+        ryukyu_nodeRetObj = {}
+        var node_num = 1;
+        for (var i=0; i<arr.length; i++) {
+            console.log("array is " + arr);
+            var name0 = nodeBaseName + "_" + node_num;
+            if (i<(arr.length - 1)) {
+                window[name0] = new ryukyu_listItem(node_num, "auto", arr[i]);
+                console.log("array item " + arr[i] + " at " + i + " converted into linked list item " + name0 + " with value " + arr[i]);
+            }
+            else{
+                window[name0] = new ryukyu_listItem(node_num, "null", arr[i]);
+                console.log("array item " + arr[i] + " at " + i + " converted into linked list item " + name0 + " with value " + arr[i]);
+            }
+        //    ryukyu_nodeRetObj.push(window[name0]);
+            ryukyu_nodeRetObj[i] = window[name0];
+            node_num++;
+        }
+        console.log("..return object is " + ryukyu_nodeRetObj);
+        return ryukyu_nodeRetObj;
+    }
 }
 
 var $ryukyu = function ryukyu(feature, payload) {  // This function can be called e.g. as $ryukyu("bubbleSort",[3,6,2,1]);
