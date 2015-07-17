@@ -1,5 +1,5 @@
 //	ryukyu.js JavaScript library
-//	v 0.1.0
+//	v 0.1.1
 //	copyright July 2015 Dan McKeown http://danmckeown.info/code/ryukyu
 //	Released under MIT license
 
@@ -72,7 +72,9 @@ function listToArray(head_id, nodeBaseName, arrName) {
             listToArray(next, nodeBaseName, arrName);
         }
     }
-    return retArr;;
+    var theRet = retArr;
+    bigCount = 0;
+    return theRet;
 }
 
 var $ryukyu = function ryukyu(feature, payload) {
