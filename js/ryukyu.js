@@ -1,5 +1,5 @@
 //	ryukyu.js JavaScript library
-//	v 0.2.1
+//	v 0.2.2
 //	copyright July 2015 Dan McKeown
 //      http://danmckeown.info/code/ryukyu
 //	Released under MIT license:
@@ -162,8 +162,8 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		function bubbleSort() {
 			zs1 = set;
 		    console.log(zs1.length);
-		    length1 = zs1.length
-		    tmp = (zs1.length * length1);
+		    var length1 = zs1.length
+		    var tmp = (zs1.length * length1);
 		    for (i=0; i<tmp; i++) {
 		        console.log("run " + i);
 		        console.log("i=" + i + "  length1=" + length1 + "  x=" + x);
@@ -183,7 +183,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 	}
 	if (feature == "crush") {
 		var retStr = [];
-		for (i=0; i<payload.length; i++) {
+		for (var i=0; i<payload.length; i++) {
 			if ((payload[i] != null) && (typeof payload[i] != 'undefined')) {
 				retStr = retStr + payload[i];
 			}
@@ -191,7 +191,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		return retStr;
 	}
 	if (feature == "bubbleSort") {
-		set = payload;
+		var set = payload;
 		console.log("about to sort: " + set + "  using Ryukyu Bubble Sort");
 		zs1 = set;
 		var x = 0;
@@ -207,9 +207,9 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		}
 		function bubbleSort() {
 		    console.log(zs1.length);
-		    length1 = zs1.length
-		    tmp = (zs1.length * length1);
-		    for (i=0; i<tmp; i++) {
+		    var length1 = zs1.length
+		    var tmp = (zs1.length * length1);
+		    for (var i=0; i<tmp; i++) {
 		        console.log("run " + i);
 		        console.log("i=" + i + "  length1=" + length1 + "  x=" + x);
 		        if (i % length1 == 0) {
@@ -232,12 +232,12 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		var x = 0;
 		resultArr = [];
 		var bubbleCount = 0;
-		arr = set;
+		var arr = set;
 		var sortedSize = 0;
 		function selectionSort() {
 		    console.log("running at " + size + " on the array: " + arr);
 		    var x = arr[size];
-		        for (i=0; i<set.length; i++) {
+		        for (var i=0; i<set.length; i++) {
 		            for (i=0; i<arr.length; i++) {
 		                if (arr[i] > arr[i+1]) {
 		                    console.log("swapping arr[size] and arr[size+i]: " + arr[size] + " "+ arr[size+i]);
@@ -251,7 +251,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		        }
 		        return arr;
 		}
-		size = sortedSize;
+		var size = sortedSize;
 		resultArr = selectionSort();
 		console.log("final sort:" + resultArr);
 		return resultArr;
@@ -310,7 +310,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		function implementInsertionSort(zs1, place, distance) {
 		    var tempe = zs1[place];
 		    var dest = zs1[place+distance];
-		    for (i=distance; i>0; i--) {
+		    for (var i=distance; i>0; i--) {
 		        console.log("replacing " + zs1[i+place-1] + " with " + zs1[i+place]);
 		        var t = zs1[i+place-1];
 		        console.log("trailer is " + trailer + " and zs1[i+place-1] is " + zs1[i+place-1] +  " and zs1[i+place] is " + zs1[i+place]);
@@ -389,7 +389,8 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		}
 		function quickSort(set) {
 		    console.log("current result array: " + resultArr);
-		    var ar2 = ar3 = [];
+		    var ar2 = [];
+            var ar3 = [];
 		    if (set.length > 1) {
 		        var half = (set.length / 2);
 		        half = Math.floor(half);
@@ -424,7 +425,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		    }
 		}
 		quickSort(set);
-		zs2 = resultArr;
+		var zs2 = resultArr;
 		console.log("final order set: " + zs2);
 		return zs2;
 	}
