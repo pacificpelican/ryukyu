@@ -1,5 +1,5 @@
 //	ryukyu.js JavaScript library
-//	v 0.2.3
+//	v 0.2.4
 //	copyright July 2015 Dan McKeown
 //      http://danmckeown.info/code/ryukyu
 //	Released under MIT license:
@@ -20,7 +20,7 @@ var ryukyu_listItem = class linkedListItem {  // This class instantiates a singl
             this.value = value;
         }
         this.id = place;  // Let place be undefined rather than null by default since it is the id and should have a value
-        if (((next === undefined) || (next === "auto")) && (place != undefined)) {
+        if (((next === undefined) || (next === "auto")) && (place !== undefined)) {
             this.next = place+1;
         }
         else {
@@ -58,7 +58,7 @@ var ryukyu_list = class listNode {  //  This class generates a series of variabl
         ryukyu_nodeRetObj[i] = window[name0];
         return ryukyu_nodeRetObj;
     }
-}
+};
 
 function ryukyu_listToArray(head_id, nodeBaseName, arrName) { 	// This function takes info about the head list variable,
                                                                 //	works along the chain of separate but nodeBaseName-linked variables,
@@ -79,7 +79,7 @@ function ryukyu_listToArray(head_id, nodeBaseName, arrName) { 	// This function 
         ryukyu_bigCount++;
         var next = window[name0].next;
         console.log("next is " + next);
-        if ((next != null) || (next != undefined)) {
+        if ((next !== null) || (next !== undefined)) {
             ryukyu_listToArray(next, nodeBaseName);
         }
     }
@@ -87,7 +87,7 @@ function ryukyu_listToArray(head_id, nodeBaseName, arrName) { 	// This function 
     ryukyu_bigCount = 0;
     window[arrName] = theRet;
     console.log("resulting array " + arrName + " is " + window[arrName]);
-    return theRet;  //  I don't know if it should return the array or true or another copy of the array as an object
+    return theRet;  //  The array returned is the same as the one generated but named based on class instantiation
 }
 
 function ryukyu_arrayToList(arr, nodeBaseName) {    //  This function takes an array and creates a series of linked items
@@ -184,7 +184,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 	if (feature == "crush") {
 		var retStr = [];
 		for (var i=0; i<payload.length; i++) {
-			if ((payload[i] != null) && (typeof payload[i] != 'undefined')) {
+			if ((payload[i] !== null) && (typeof payload[i] !== 'undefined')) {
 				retStr = retStr + payload[i];
 			}
 		}
@@ -212,7 +212,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		    for (var i=0; i<tmp; i++) {
 		        console.log("run " + i);
 		        console.log("i=" + i + "  length1=" + length1 + "  x=" + x);
-		        if (i % length1 == 0) {
+		        if (i % length1 === 0) {
 		            x = 0;
 		        }
 		        else {
@@ -261,20 +261,12 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		console.log("about to sort: " + set + " using Ryukyu Insertion Sort");
 		var zs1 = set;
 		var x = 0;
-		function swapLeft(z) {  //  Not used in this program but could be useful somewhere in a library (?)
+		function swapLeft(z) {
 		    if (set[z] > set[z+1]) {
 		        console.log('attempting to swap ' + set[z] + " and " + set[z+1]);
 		        var temp = set[z];
 		        set[z] = set[z+1];
 		        set[z+1] = temp;
-		    }
-		}
-		function checkLeft(z) {
-		    if (set[z-1] > set[z]) {
-		        return true;
-		    }
-		    else {
-		        return false;
 		    }
 		}
 		function insertionSortSpotFinder(set, x) {  // find the position of the first value that needs to shift right
@@ -349,7 +341,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		var zs1 = set;
 		var x = 0;
 		var resultArr = [];
-		function swap(seti, z) {  //  Not used in this program but could be useful somewhere in a library (?)
+		function swap(seti, z) {
 		    console.log("seti is " + seti);
 		    z = 1;
 		    if (seti[z-1] != 'undefined') {
@@ -367,14 +359,12 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		        }
 		    }
 		}
-		function checkLeft(z) {
-		    if (set[z-1] != 'undefined') {
-		        if (set[z-1] > set[z]) {
-		            return true;
-		        }
-		        else {
-		            return false;
-		        }
+        function checkLeft(z) {
+		    if (set[z-1] > set[z]) {
+		        return true;
+		    }
+		    else {
+		        return false;
 		    }
 		}
 		function quickOne(arr) {
@@ -432,4 +422,4 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 	else {
 		return false;
 	}
-}
+};
