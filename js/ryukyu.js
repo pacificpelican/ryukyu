@@ -1,5 +1,5 @@
 //	ryukyu.js JavaScript library
-//	v 0.2.2
+//	v 0.2.3
 //	copyright July 2015 Dan McKeown
 //      http://danmckeown.info/code/ryukyu
 //	Released under MIT license:
@@ -38,9 +38,9 @@ var ryukyu_list = class listNode {  //  This class generates a series of variabl
         }
         if (defaultValue === undefined) {
             console.log("setting default value to null");
-            var defaultValue = null;
+            defaultValue = null;
         }
-        ryukyu_nodeRetObj = {}
+        ryukyu_nodeRetObj = {};
         for (var i=1; i<theLength; i++) {
             var nodeName;
             nodeName = baseName + "_" + i;
@@ -101,7 +101,7 @@ function ryukyu_arrayToList(arr, nodeBaseName) {    //  This function takes an a
         if ((nodeBaseName === undefined) || (nodeBaseName === "null") || (arr.length < 1)) {
             nodeBaseName = "node";
         }
-        ryukyu_nodeRetObj = {}
+        ryukyu_nodeRetObj = {};
         var node_num = 1;
         for (var i=0; i<arr.length; i++) {
             console.log("array is " + arr);
@@ -131,7 +131,7 @@ function ryukyu_listObjectToArray(obj, arrName) {   // This function takes an ob
         if ((arrName === undefined) || (arrName === "null")) {
             arrName = "array";
         }
-        ryukyu_retArr = []
+        ryukyu_retArr = [];
         var $count = 0;
         window[arrName] = [];
         for (var prop in obj) {
@@ -162,7 +162,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		function bubbleSort() {
 			zs1 = set;
 		    console.log(zs1.length);
-		    var length1 = zs1.length
+		    var length1 = zs1.length;
 		    var tmp = (zs1.length * length1);
 		    for (i=0; i<tmp; i++) {
 		        console.log("run " + i);
@@ -207,7 +207,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		}
 		function bubbleSort() {
 		    console.log(zs1.length);
-		    var length1 = zs1.length
+		    var length1 = zs1.length;
 		    var tmp = (zs1.length * length1);
 		    for (var i=0; i<tmp; i++) {
 		        console.log("run " + i);
