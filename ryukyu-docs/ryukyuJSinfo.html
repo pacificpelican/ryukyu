@@ -2,7 +2,7 @@
 <html><!-- Ryukyu framework by Dan McKeown http://danmckeown.info/code/ryukyu -->
 		<!-- copyright 2015 released under MIT license -->
 <head>
-	<title>Ryukyu.js features</title>
+	<title>ryukyu.js features</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script type="text/javascript" src="../js/ryukyu.js"></script>
@@ -10,10 +10,10 @@
 <body>
 	<div class="container">
 		<div class="header">
-			<h1><a href="http://danmckeown.info/code/ryukyu">Ryukyu</a>.js</h1>
+			<h1><a href="http://danmckeown.info/code/ryukyu">ryukyu</a>.js</h1>
 		</div>
 		<div class="main">
-			<h2>Stuff that Ryukyu does:</h2>
+			<h2>Stuff that ryukyu does:</h2>
 			<h4>Sorting functions:</h4>
 			<ul>
 				<li><code class="ryukyuInput">$ryukyu("bubbleSort", [4, 7, 12, 83, 5])</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">[4, 5, 7, 12, 83]</span></li>
@@ -32,11 +32,14 @@
 				<li><code class="ryukyuInput">new_arr[3] = "conure"</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">"conure"</span></li>
 				<li><code class="ryukyuInput">var eee = ryukyu_arrayToList(new_arr, "new_list")</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">undefined</span></li>
 				<li><code class="ryukyuInput">eee</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">Object {1: linkedListItem, 2: linkedListItem, 3: linkedListItem, 4: linkedListItem, 5: linkedListItem}</span></li>
-				<li><code class="ryukyuInput">eee[2]</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">linkedListItem {value: "macaw", id: 3, next: 4}</span></li>
+				<li><code class="ryukyuInput">eee[3]</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">linkedListItem {value: "macaw", id: 3, next: 4}</span></li>
 				<li><code class="ryukyuInput">new_list_2</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">linkedListItem {value: "parakeet", id: 2, next: 3}</span></li>
 				<li><code class="ryukyuInput">new_list_3</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">linkedListItem {value: "macaw", id: 3, next: 4}</span></li>
 				<li><code class="ryukyuInput">new_list_4</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">linkedListItem {value: "conure", id: 4, next: 5}</span></li>
 				<li><code class="ryukyuInput">new_list_5</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">linkedListItem {value: "parakeet", id: 5, next: "null"}</span></li>
+				<li><code class="ryukyuInput">var d = ryukyu_listObjectToArray(eee, "new_set")</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">undefined</span></li>
+				<li><code class="ryukyuInput">d</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">["parakeet", "parakeet", "macaw", "conure", "parakeet"]</span></li>
+				<li><code class="ryukyuInput">new_set</code><span class="hashyrocket"> => </span><span class="ryukyuOutput">["parakeet", "parakeet", "macaw", "conure", "parakeet"]</span></li>
 			</ol>
 		</div>
 		<aside class="sidebar">

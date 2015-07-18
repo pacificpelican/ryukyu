@@ -1,5 +1,5 @@
 //	ryukyu.js JavaScript library
-//	v 0.1.8
+//	v 0.2.0
 //	copyright July 2015 Dan McKeown
 //      http://danmckeown.info/code/ryukyu
 //	Released under MIT license:
@@ -30,6 +30,7 @@ var ryukyu_listItem = class linkedListItem {  // This class instantiates a singl
 };
 
 var ryukyu_list = class listNode {  //  This class generates a series of variables, each w/a next pointer to the next one's id
+                                    //  It also separately returns all the node items grouped together as an object
     constructor(theLength, baseName, defaultValue) {
         if (baseName === undefined) {
             console.log("basename automatically assigned as node");
@@ -48,18 +49,20 @@ var ryukyu_list = class listNode {  //  This class generates a series of variabl
             window[name0] = new ryukyu_listItem(i, "auto", defaultValue);
             ryukyu_nodeRetObj[i] = window[name0];
         }
-            var nodeName;
-            var pos = i;
-            nodeName = baseName + "_" + pos;
-            console.log("about to construct " + nodeName);
-            var name0 = nodeName;
-            window[name0] = new ryukyu_listItem(pos, null, defaultValue);
-            ryukyu_nodeRetObj[i] = window[name0];
-            return ryukyu_nodeRetObj;
+        var nodeName;
+        var pos = i;
+        nodeName = baseName + "_" + pos;
+        console.log("about to construct " + nodeName);
+        var name0 = nodeName;
+        window[name0] = new ryukyu_listItem(pos, null, defaultValue);
+        ryukyu_nodeRetObj[i] = window[name0];
+        return ryukyu_nodeRetObj;
     }
 }
 
-function ryukyu_listToArray(head_id, nodeBaseName, arrName) { // This takes info about the head list variable, works along chain and returns an array
+function ryukyu_listToArray(head_id, nodeBaseName, arrName) { 	// This function takes info about the head list variable,
+																//	works along the chain of separate but nodeBaseName-linked variables,
+                                                                //  and generates an array based on nodeBaseName and also returns an array
     if ((head_id === undefined) || (nodeBaseName === undefined)) {
         return false;
     }
@@ -87,7 +90,9 @@ function ryukyu_listToArray(head_id, nodeBaseName, arrName) { // This takes info
     return theRet;  //  I don't know if it should return the array or true or another copy of the array as an object
 }
 
-function ryukyu_arrayToList(arr, nodeBaseName) {    // arr should be a variable not in quotes (or a literal in quotes)
+function ryukyu_arrayToList(arr, nodeBaseName) {    //  This function takes an array and creates a series of linked items
+                                                    //  based on nodeBaseName and also separately returns an object of all those items
+                                                    // arr should be a variable not in quotes (or a literal maybe)
                                                     // while nodeBaseName should be a name in quotes
     if ((arr === undefined) || (arr === "null")) {
         return false;
@@ -117,6 +122,29 @@ function ryukyu_arrayToList(arr, nodeBaseName) {    // arr should be a variable 
     }
 }
 
+function ryukyu_listObjectToArray(obj, arrName) {   // This function takes an object in the style returned by ryukyu_list
+                                                    // and returns an array and creates an array based on arrName
+    if ((obj === undefined) || (obj === null)) {
+        return false;
+    }
+    else {
+        if ((arrName === undefined) || (arrName === "null")) {
+            arrName = "array";
+        }
+        ryukyu_retArr = []
+        var $count = 0;
+        window[arrName] = [];
+        for (var prop in obj) {
+            console.log("key " + prop + " = " + obj[prop].value);
+            ryukyu_retArr[$count] = obj[prop].value;
+            window[arrName].push(obj[prop].value);
+            $count++;
+        }
+    console.log(obj + " has been converted into array " + arrName + " with values " + ryukyu_retArr);
+    return ryukyu_retArr;
+    }
+}
+
 var $ryukyu = function ryukyu(feature, payload) {  // This function can be called e.g. as $ryukyu("bubbleSort",[3,6,2,1]);
 	function sortResultArr(set) {
 		console.log("about to sort: " + set + "  using Ryukyu default sort");
@@ -132,7 +160,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		    return set0;
 		}
 		function bubbleSort() {
-				zs1 = set;
+			zs1 = set;
 		    console.log(zs1.length);
 		    length1 = zs1.length
 		    tmp = (zs1.length * length1);
