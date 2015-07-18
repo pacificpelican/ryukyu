@@ -1,5 +1,5 @@
 //	ryukyu.js JavaScript library
-//	v 0.2.0
+//	v 0.2.1
 //	copyright July 2015 Dan McKeown
 //      http://danmckeown.info/code/ryukyu
 //	Released under MIT license:
@@ -61,7 +61,7 @@ var ryukyu_list = class listNode {  //  This class generates a series of variabl
 }
 
 function ryukyu_listToArray(head_id, nodeBaseName, arrName) { 	// This function takes info about the head list variable,
-																//	works along the chain of separate but nodeBaseName-linked variables,
+                                                                //	works along the chain of separate but nodeBaseName-linked variables,
                                                                 //  and generates an array based on nodeBaseName and also returns an array
     if ((head_id === undefined) || (nodeBaseName === undefined)) {
         return false;
