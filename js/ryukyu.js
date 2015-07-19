@@ -1,11 +1,13 @@
 //	ryukyu.js JavaScript library
-//	v 0.2.4
+//	v 0.2.5
 //	copyright July 2015 Dan McKeown
 //      http://danmckeown.info/code/ryukyu
 //	Released under MIT license:
 //      https://github.com/pacificpelican/ryukyu/blob/master/LICENSE
 
-"use strict";  //  class declarations require ES6/ES2015 and strict mode
+/*jshint esnext: true */
+"use strict";
+//  class declarations require ES6/ES2015 and strict mode
 
 var ryukyu_retArr = [];
 var ryukyu_bigCount = 0;
@@ -79,7 +81,7 @@ function ryukyu_listToArray(head_id, nodeBaseName, arrName) { 	// This function 
         ryukyu_bigCount++;
         var next = window[name0].next;
         console.log("next is " + next);
-        if ((next !== null) || (next !== undefined)) {
+        if ((next !== null) && (next !== undefined)) {
             ryukyu_listToArray(next, nodeBaseName);
         }
     }
@@ -261,14 +263,6 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		console.log("about to sort: " + set + " using Ryukyu Insertion Sort");
 		var zs1 = set;
 		var x = 0;
-		function swapLeft(z) {
-		    if (set[z] > set[z+1]) {
-		        console.log('attempting to swap ' + set[z] + " and " + set[z+1]);
-		        var temp = set[z];
-		        set[z] = set[z+1];
-		        set[z+1] = temp;
-		    }
-		}
 		function insertionSortSpotFinder(set, x) {  // find the position of the first value that needs to shift right
 		    console.log('spot finder run ' + x);
 		    while (x<set.length) {
@@ -359,7 +353,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		        }
 		    }
 		}
-        function checkLeft(z) {
+		function checkLeft(z) {
 		    if (set[z-1] > set[z]) {
 		        return true;
 		    }
