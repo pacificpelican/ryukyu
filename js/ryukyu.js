@@ -374,7 +374,7 @@ var $ryukyu = function ryukyu(feature, payload) {  // This function can be calle
 		function quickSort(set) {
 		    console.log("current result array: " + resultArr);
 		    var ar2 = [];
-            var ar3 = [];
+		    var ar3 = [];
 		    if (set.length > 1) {
 		        var half = (set.length / 2);
 		        half = Math.floor(half);
