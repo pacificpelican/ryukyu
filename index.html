@@ -1,28 +1,66 @@
 <!DOCTYPE html>
-<html><!-- Ryukyu HTML5 starter index.html template 0.2.2 by Dan McKeown http://danmckeown.info copyright April 2015 Licensed under MIT license -->
-<head>
-	<title>Title</title>
+<!-- This is the official web site front page for the Ryukyu front-end framework -->
+<!-- Download the code at https://github.com/pacificpelican/ryukyu -->
+<html><!-- powered by Ryukyu HTML5 starter by Dan McKeown http://danmckeown.info -->
+<head><!-- copyright April-July 2015 Licensed under MIT license -->
+	<title>Ryukyu front-end framework - danmckewn.info/code/ryukyu</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/ryukyu.css" rel="stylesheet" />
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/joeypc.js"></script>
 	<script type="text/javascript" src="js/ryukyu.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			joeypc_random_reddish_light_background();
+			joeypc_change_link_color("beige");
+			joeypc_make_random_light_text();
+											});
+	</script>
 </head>
 <body>
 	<div class="container">
 		<header class="header">
-			<h1>Site heading</h1>
+			<h1><a href="http://danmckeown.info/code/ryukyu">Ryukyu</a> front-end framework</h1>
 		</header>
-		<main class="main">
-			<h2>Content headline</h2>
-			<p>Main content</p>
+		<main class="main col-lg-9">
+			<h2>Features</h2>
+				<h4>ryukyu.css</h4>
+					<ul>
+						<li>typography: large and sans-serif</li>
+						<li>resposiveness and readability</li>
+						<li><a href="ryukyu-docs/BootstrapAPIcomponents.html">partial conformity to Bootstrap 3 CSS classes</a>:
+							<ul>
+								<li>.btn-default</li>
+								<li>.text-success</li>
+								<li>.jumbotron</li>
+								<li>grid selectors</li>
+							</ul>
+						</li>
+					</ul>
+				<h4>ryukyu.js</h4>
+						<ul>
+							<li><a href="ryukyu-docs/ryukyuJSinfo.html">linked list tools</a>
+								<ul>
+									<li>convert from array to linked list object</li>
+									<li>create linked list object and object of linked list objects</li>
+									<li>convert from linked list to array</li>
+								</ul>
+							</li>
+							<li><a href="ryukyu-docs/ryukyuJSinfo.html">sorting functions</a></li>
+						</ul>
+				<h4>joeypc.js</h4>
+								<ul>
+									<li><a href="ryukyu-docs/randomColorsPage.html">CSS color randomization</a></li>
+								</ul>
+						</main>
 		</main>
-		<aside class="sidebar">
-			<p>sidebar content</p>
+		<aside class="sidebar col-lg-3">
+			<p><img src="ryukyu-docs/images/ryukyuLogo.png" alt="Ryukyu logo" /></p>
 		</aside>
 		<footer class="footer">
-			<p>footer info</p>
+			<p></p>
+			<p>Ryukyu was created by <a href="http://danmckeown.info">Dan McKeown</a>.  <span><a href="https://github.com/pacificpelican/ryukyu">Download the code on GitHub</a>.</span></p>
 		</footer>
 	</div>
 </body>

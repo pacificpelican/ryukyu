@@ -1,6 +1,6 @@
-//	joeypc JS/jQuery framework http://joeypc.com version 0.1.2 //
+//	joeypc JS/jQuery framework http://joeypc.com version 0.1.3 //
 //	https://github.com/pacificpelican/joeypc //
-//  copyright May 2015 by Dan McKeown http://danmckeown.info //
+//  copyright May-July 2015 by Dan McKeown http://danmckeown.info //
 //	Licensed under MIT license //
 
 ;function joeypc() {
@@ -158,7 +158,7 @@ function joeypc_old_random_light_background() {
 			randomNumber = randomNumber + digit;
 								}
 		$( "body" ).css( "background-color", randomNumber );
-	    console.log("changing text color to " + randomNumber);
+	    console.log("changing background color to " + randomNumber);
 									}
 
 function joeypc_random_dark_links() {
@@ -226,7 +226,7 @@ function joeypc_random_dark_text_on_light_background_with_dark_links() {
 	joeypc_random_dark_text();
 	joeypc_random_light_background();
 	joeypc_random_dark_links();
-																	}
+															}
 
 function joeypc_get_longest_word_in_sentence(string) {
 	var string1 = string;
@@ -264,70 +264,70 @@ function joeypc_get_longest_word_in_sentence(string) {
 	return longest;
 													}
 
-  function joeypc_make_random_dark_background() {
+function joeypc_make_random_dark_background() {
     var randomNumber = "#1";
 		console.log('joeypc new random dark background runnning');
 		  for (i = 0; i < 1; i++) {
 			  var digit = joeypc_random_digit();
 				randomNumber = randomNumber + digit;
-															}
+													}
 			randomNumber = randomNumber + "1";
 				for (i = 0; i < 1; i++) {
 				  var digit = joeypc_random_digit();
 					randomNumber = randomNumber + digit;
-																}
+														}
 			randomNumber = randomNumber + "1";
 			  for (i = 0; i < 1; i++) {
 				  var digit = joeypc_random_digit();
 					randomNumber = randomNumber + digit;
-																}
+														}
 			$( "body" ).css( "background-color", randomNumber );
 			console.log("changing background color to " + randomNumber);
 																}
 
-    function joeypc_make_random_bluish_dark_background() {
-		    var randomNumber = "#1";
-				console.log('joeypc new random dark background runnning');
-						for (i = 0; i < 1; i++) {
-					  	var digit = joeypc_random_number_1_to_10();
-					  	randomNumber = randomNumber + digit;
-																		}
-			  		randomNumber = randomNumber + "1";
-						for (i = 0; i < 1; i++) {
-					  	var digit = joeypc_random_number_1_to_10();
-							randomNumber = randomNumber + digit;
-																		}
-							randomNumber = randomNumber + "2";
-						for (i = 0; i < 1; i++) {
-							var digit = joeypc_random_number_1_to_10();
-							randomNumber = randomNumber + digit;
-																		}
-						$( "body" ).css( "background-color", randomNumber );
-								console.log("changing background color to " + randomNumber);
-																		}
-	function joeypc_maxMinAvg(arr) {
-		console.log('joeypc maxMinAvg runnning');
-	  var max = arr[0];
-	  var min = arr[0];
-	  var sum = 0;
-	  var avg;
+function joeypc_make_random_bluish_dark_background() {
+	var randomNumber = "#1";
+		console.log('joeypc new random dark background runnning');
+		for (i = 0; i < 1; i++) {
+			var digit = joeypc_random_number_1_to_10();
+			randomNumber = randomNumber + digit;
+								}
+			randomNumber = randomNumber + "1";
+			for (i = 0; i < 1; i++) {
+				var digit = joeypc_random_number_1_to_10();
+				randomNumber = randomNumber + digit;
+										}
+			randomNumber = randomNumber + "2";
+				for (i = 0; i < 1; i++) {
+					var digit = joeypc_random_number_1_to_10();
+						randomNumber = randomNumber + digit;
+														}
+				$( "body" ).css( "background-color", randomNumber );
+						console.log("changing background color to " + randomNumber);
+															}
+function joeypc_maxMinAvg(arr) {
+	console.log('joeypc maxMinAvg runnning');
+		var max = arr[0];
+		var min = arr[0];
+		var sum = 0;
+		var avg;
 	    for (i = 0; i < arr.length; i++) {
-	      if (arr[i] > max) {
-	        max = arr[i];
-	        sum = sum + arr[i]
+	    	if (arr[i] > max) {
+	        	max = arr[i];
+	        	sum = sum + arr[i]
 
 	                        }
-	      else if (arr[i] < min) {
-	        min = arr[i];
-	        sum = sum + arr[i]
+	    	else if (arr[i] < min) {
+	        	min = arr[i];
+	        	sum = sum + arr[i]
 	                              }
-	      else {
-	        sum = sum + arr[i];
-	          }
+	      	else {
+	        	sum = sum + arr[i];
+	          	}
 	                              }
 	    avg = sum/arr.length
 	    var result = "max: " + max + " " + "min: " + min + " " + "avg: " + avg ;
-	    //  document.write(sum);
+	    console.log("returning " + result);
 	    return result;
 									}
 
@@ -343,17 +343,13 @@ function joeypc_make_random_light_text() {
 				   var digit = joeypc_random_digit();
 				 	randomNumber = randomNumber + digit;
 				 												}
-			 // for (i = 0; i < 1; i++) {
-				//    var digit = joeypc_random_digit();
-				//  	randomNumber = randomNumber + digit;
-				//  												}
 			randomNumber = randomNumber + "E";
 			  for (i = 0; i < 1; i++) {
 				  var digit = joeypc_random_digit();
 					randomNumber = randomNumber + digit;
 																}
 			$( "body" ).css( "color", randomNumber );
-			console.log("changing background color to " + randomNumber);
+			console.log("changing text color to " + randomNumber);
 										}
 function joeypc_make_random_light_links() {
     var randomNumber = "#E";
@@ -362,22 +358,18 @@ function joeypc_make_random_light_links() {
 			  var digit = joeypc_random_digit();
 				randomNumber = randomNumber + digit;
 															}
-				randomNumber = randomNumber + "E";
+			randomNumber = randomNumber + "E";
 				 for (i = 0; i < 1; i++) {
 				   var digit = joeypc_random_digit();
 				 	randomNumber = randomNumber + digit;
 				 												}
-			 // for (i = 0; i < 1; i++) {
-				//    var digit = joeypc_random_digit();
-				//  	randomNumber = randomNumber + digit;
-				//  												}
 			randomNumber = randomNumber + "E";
 			  for (i = 0; i < 1; i++) {
 				  var digit = joeypc_random_digit();
 					randomNumber = randomNumber + digit;
 																}
 			$( "a" ).css( "color", randomNumber );
-			console.log("changing background color to " + randomNumber);
+			console.log("changing link color to " + randomNumber);
 										}
 
 function joeypc_random_light_text_on_dark_background_with_light_links() {
