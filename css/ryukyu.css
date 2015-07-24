@@ -1,6 +1,6 @@
 /*  Ryukyu CSS library by Dan McKeown copyright May-July 2015 								*/
 /*  http://danmckeown.info/code/ryukyu/												*/
-/*  v0.2.2  								Licensed under MIT license 					    */
+/*  v0.2.3  								Licensed under MIT license 					    */
 
 body {
 	font-family: "San Francisco", "Roboto", "Lato", "Ubuntu", Helvetica, sans-serif, sans;
@@ -580,12 +580,36 @@ body {
 	li {
 		padding-bottom: 6px;
 	}
-	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6 .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6 .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, {
+	.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6 .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
 	max-width: 100%;
 	height: auto;
 	}
-	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, {
+	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6 .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
 	max-width: 100%;
+	height: auto;
+	}
+	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+	max-width: 100%;
+	height: auto;
+	}
+	.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+	max-width: 100%;
+	height: auto;
+	}
+	.small-1, .small-2, .small-3, .small-4, small-5, small-6 .small-7, .small-8, .small-9, .small-10, .small-11, .small-12 {
+	max-width: 100%;
+	height: auto;
+	}
+	.medium-1, .medium-2, .medium-3, .medium-4, .medium-5, .medium-6 .medium-7, .medium-8, .medium-9, .medium-10, .medium-11, .medium-12 {
+	max-width: 100%;
+	height: auto;
+	}
+	.large-1, .large-2, .large-3, .large-4, .large-5, .large-6, .large-7, .large-8, .large-9, .large-10, .large-11, .large-12 {
+	max-width: 100%;
+	height: auto;
+	}
+	.rc-m-1, .rc-m-2, .rc-m-3, .rc-m-4, .rc-m-5, .rc-m-6, .rc-m-7, .rc-m-8, .rc-m-9, .rc-m-10, .rc-m-11, .rc-m-12 .rc-m-13 .rc-m-14 {
+	width: 99%;
 	height: auto;
 	}
 }
