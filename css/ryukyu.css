@@ -1,6 +1,6 @@
 /*  Ryukyu CSS library by Dan McKeown copyright May-July 2015 								*/
 /*  http://danmckeown.info/code/ryukyu/												*/
-/*  v0.2.3  								Licensed under MIT license 					    */
+/*  v0.2.4  								Licensed under MIT license 					    */
 
 body {
 	font-family: "San Francisco", "Roboto", "Lato", "Ubuntu", Helvetica, sans-serif, sans;
@@ -42,10 +42,7 @@ body {
 	color: red;
 }
 
-.btn {
-	border-radius: 10px;
-	border: 1px solid #AAAAAA;
-	background-color: #EEEEEE;
+.btn {	
 	padding-top: 7px;
 	padding-bottom: 7px;
 	padding-right: 5px;
@@ -54,6 +51,42 @@ body {
 	display: inline-block;
 	margin-bottom: 1px;
 	margin-top: 2px;
+}
+
+.btn-default {
+	border-radius: 10px;
+	border: 1px solid #AAAAAA;
+	background-color: #EEEEEE;
+}
+
+.btn-primary {
+	border-radius: 10px;
+	border: 1px solid #AAAAAA;
+	background-color: #33CCEE;
+}
+
+.btn-success {
+	border-radius: 10px;
+	border: 1px solid #AAAAAA;
+	background-color: #66FFAA;
+}
+
+.btn-danger {
+	border-radius: 10px;
+	border: 1px solid #AAAAAA;
+	background-color: #FF3366;
+}
+
+.btn-warning {
+	border-radius: 10px;
+	border: 1px solid #AAAAAA;
+	background-color: #FFDD77;
+}
+
+.btn-info {
+	border-radius: 10px;
+	border: 1px solid #AAAAAA;
+	background-color: #CCCCCC;
 }
 
 .jumbotron {
@@ -799,4 +832,16 @@ td {
 	margin-top: 3px;
 	margin-bottom: 2px;
 	vertical-align: top;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
 }
