@@ -1,0 +1,59 @@
+/*  Ryukyu Nav CSS library by Dan McKeown copyright May-July 2015 								*/
+/*  http://danmckeown.info/code/ryukyu/												*/
+/*  v0.0.1  								Licensed under MIT license 					    */
+
+nav, .nav {
+	font-family: "Carme", "San Francisco", "Roboto", "Lato", "Ubuntu", Helvetica, sans-serif, sans;
+	margin-bottom: auto;
+	background-color: #EEDDDD;
+}
+
+ul.navbar-nav:first-of-type {
+	border-style: dotted;
+    border-width: 1px;
+	border-color: darkblue;
+	margin-left: 0px;
+}
+
+ul.navbar-nav:first-of-type li {
+	padding-left: 2px;
+	padding-right: 4px;
+}
+
+.navbar-header button {
+	visibility: hidden;
+}
+
+@media screen and (min-width: 901px) {
+	nav {
+        font-size: 17px;
+    }
+	li {
+		visibility: visible;
+		display: inline-block;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	nav {
+        font-size: 16px;
+    }
+	li {
+		display: block;
+	}
+}
+
+nav a {
+	text-decoration: none;
+	color: #222226;
+}
+
+nav a:visited {
+	text-decoration: none;
+	color: #222255;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
