@@ -4,6 +4,6 @@ Ryukyu is designed to work as a simple HTML 5 starter kit for web site projects:
 
 For an idea about Ryukyu can do, check [this screencast on the grid systems](https://www.youtube.com/watch?v=dnZqFKVtAa8) and [this one on linked list objects created with class declarations](https://www.youtube.com/watch?v=JA_DhelMeJs).
 
-[![Join the chat at https://gitter.im/pacificpelican/ryukyu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pacificpelican/ryukyu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+Ryukyu provides much of the CSS for the [Fremont Cut theme (aka Theme 12)](https://github.com/pacificpelican/theme12).
 
 Ryukyu is released under the [MIT license](LICENSE).
