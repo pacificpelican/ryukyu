@@ -1,13 +1,13 @@
 //  Mocha ChaiJS Tests for joeypc.com JavaScript library
 //  http://danmckeown.info/code/ryukyu/ryukyu-docs/randomColorsPage.html
-//  May 2016    v0.1.1
-
-var chai = require('chai');		//  npm install chai
-chai.use(require('chai-jq'));	//  npm install chai-jq
+//  May 2016    v0.1.2
+								                //  npm install mocha
+var chai = require('chai');		                //  npm install chai
+chai.use(require('chai-jq'));	                //  npm install chai-jq
 
 var domSimulator = require('jsdom-global')();   //  npm install jsdom-global
                                         		//  npm install jsdom
-$ = require('../js/jquery.js');		//	link to jQuery file
+$ = require('../js/jquery.js');		            //	link to jQuery file
 
 var fs = require('fs');
 var vm = require('vm');
@@ -21,22 +21,31 @@ var assert = chai.assert;
 
 describe('joeypc_make_random_light_text', function() {
     it('the function joeypc_make_random_light_text() is a function', function () {
-      expect(joeypc_make_random_light_text).to.be.a('function');
+        expect(joeypc_make_random_light_text).to.be.a('function');
     });
 });
 
 describe('joeypc_change_background', function() {
     it('the function joeypc_change_background(yellow) changes the body background color to yellow', function () {
 		joeypc_change_background('yellow');
-			var the_body = $('body');
-			expect(the_body).to.be.$visible;
-			expect(the_body).to.have.$css('background-color', 'yellow');
+		var the_body = $('body');
+		expect(the_body).to.be.$visible;
+		expect(the_body).to.have.$css('background-color', 'yellow');
+    });
+});
+
+describe('joeypc_change_link_color', function() {
+    it('the function joeypc_change_link_color(green) changes the anchor tag color to green', function () {
+		$("body").append("<a id='testing_a'>hello world</a>")
+		joeypc_change_link_color('green');
+		var the_a = $('a#testing_a');
+		expect(the_a).to.have.$css('color', 'green');
     });
 });
 
 describe('joeypc_random_digit', function() {
     it('the function joeypc_random_digit returns a number from 0 to 9', function () {
-      var the_digit = joeypc_random_digit();
+        var the_digit = joeypc_random_digit();
 		console.log('digit returned: ' + the_digit);
 		assert.isBelow(the_digit, 10, 'the digit is less than 10');
     });
