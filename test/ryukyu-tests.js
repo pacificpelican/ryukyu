@@ -1,6 +1,6 @@
 //  Mocha ChaiJS Tests for Ryukyu JavaScript library
 //  http://danmckeown.info/code/ryukyu/ryukyu-docs/ryukyuJSinfo.html
-//  May 2016    v0.1.2
+//  May 2016    v0.1.3
                                         //  npm install mocha
 var assert = require('chai').assert;    //  npm install chai
 var expect = require('chai').expect;
@@ -33,7 +33,7 @@ var test_array = [3,6,34,2,'Bogey',1];
 var new_obj = ryukyu_arrayToList(test_array);
 
 describe('$ryukyu', function() {
-    it('covert ryukyu custom linked list object to array', function () {
+    it('convert ryukyu custom linked list object to array', function () {
         var old_array = ryukyu_listObjectToArray(new_obj);
         expect(old_array).to.eql(test_array);
     });
